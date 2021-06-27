@@ -64,10 +64,6 @@ public class MainActivity extends AppCompatActivity implements CharacterAPITask.
             String[] params = {"https://www.breakingbadapi.com/api/characters/"};
             apiTask.execute(params);
         }
-
-
-
-
     }
 
     @Override
@@ -83,17 +79,20 @@ public class MainActivity extends AppCompatActivity implements CharacterAPITask.
         Log.d(TAG, "onCharacterClick() called with: view = [" + view + "], itemIndex = [" + itemIndex + "]");
         Context context = this;
 
-        //TODO handle on image click
-//        if (view.getId() == R.id.iv_character_item_image) {
-//
-//        }
+        if (view.getId() == R.id.imageView || view.getId() == R.id.tv_character_item_name || view.getId() == R.id.tv_character_item_nickname) {
+            Class destinationActivity = ImageActivity.class;
+            Intent startDestinationActivityIntent = new Intent(context, destinationActivity);
 
-        Class destinationActivity = CharacterActivity.class;
-        Intent startDestinationActivityIntent = new Intent(context, destinationActivity);
+            startDestinationActivityIntent.putExtra(Intent.EXTRA_INDEX, characters.get(itemIndex));
+            startActivity(startDestinationActivityIntent);
+        } else {
+            Class destinationActivity = CharacterActivity.class;
+            Intent startDestinationActivityIntent = new Intent(context, destinationActivity);
 
-        startDestinationActivityIntent.putExtra(Intent.EXTRA_INDEX, characters.get(itemIndex));
+            startDestinationActivityIntent.putExtra(Intent.EXTRA_INDEX, characters.get(itemIndex));
 
-        startActivity(startDestinationActivityIntent);
+            startActivity(startDestinationActivityIntent);
+        }
     }
 
     @Override
