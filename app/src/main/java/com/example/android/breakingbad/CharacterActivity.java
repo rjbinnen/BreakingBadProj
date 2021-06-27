@@ -49,16 +49,19 @@ public class CharacterActivity extends AppCompatActivity {
             Character c = (Character) serializable;
             Log.d(TAG, "onCreate: " +c.getName());
 
-            mNameTextView.setText(c.getName());
-            mNicknameTextView.setText(c.getNickName());
+            mNameTextView.append(" " + c.getName());
+            mNicknameTextView.append(" " + c.getNickName());
             Picasso.get().load(c.getImage()).into(mImageView);
-            mStatusTextView.setText(c.getStatus());
-            mBirthdayTextView.setText(c.getBirthday());
-            for (int i = 0; i < c.getOccupations().length; i++) {
-                mOccupationsTextView.append(c.getOccupations()[i]);
+            mStatusTextView.append(" " + c.getStatus());
+            mBirthdayTextView.append(" " + c.getBirthday());
+            mOccupationsTextView.append(" ");
+            for (int i = 0; i < c.getOccupations().length -1; i++) {
+                mOccupationsTextView.append(c.getOccupations()[i] + "\n");
             }
+            mOccupationsTextView.append(c.getOccupations()[c.getOccupations().length - 1]);
+            mAppearancesTextView.append(" ");
             for (int i = 0; i < c.getAppearance().length; i++) {
-                mAppearancesTextView.append(String.valueOf(c.getAppearance()[i]));
+                mAppearancesTextView.append("Season " + (c.getAppearance()[i]) + "\n");
             }
         }
 

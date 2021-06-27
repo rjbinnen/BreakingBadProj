@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CharacterActivity">
 
     <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_name"
         android:text="@string/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_item_name"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_nickname"
         android:text="@string/nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <ImageView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/iv_detail_item_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_item_nickname"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_status"
         android:text="@string/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_item_status"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_birthday"
         android:text="@string/birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_item_birthday"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_occupations"
         android:text="@string/occupations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_item_occupations"
+        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tv_detail_item_appearances"
         android:text="@string/appearances"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

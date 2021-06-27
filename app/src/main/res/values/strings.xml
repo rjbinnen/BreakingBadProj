@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">BreakingBad</string>
+    <string name="app_name">Breaking Bad</string>
+    <string name="name">Name: </string>
+    <string name="nickname">Nickname: </string>
+    <string name="status">Status: </string>
+    <string name="birthday">Birthday:</string>
+    <string name="occupations">Occupations:</string>
+    <string name="appearances">Appearances:</string>
 </resources>

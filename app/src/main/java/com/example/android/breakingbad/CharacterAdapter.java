@@ -45,9 +45,9 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
         Log.d(TAG, "onBindViewHolder() called with: holder = [" + holder + "], position = [" + position + "]");
         Character character = characterList.get(position);
         Log.i(TAG, "onBindViewHolder: character is " + character.toString());
-        holder.mCharacterNameTextView.setText(character.getName());
-        holder.mCharacterStatusTextView.setText(character.getStatus());
-        holder.mCharacterNicknameTextView.setText(character.getNickName());
+        holder.mCharacterNameTextView.append(" " + character.getName());
+        holder.mCharacterStatusTextView.append(" " + character.getStatus());
+        holder.mCharacterNicknameTextView.append(" " + character.getNickName());
         Picasso.get().load(character.getImage()).into(holder.mCharacterImageView);
     }
 

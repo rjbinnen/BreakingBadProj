@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kapot Slecht</string>
+    <string name="name">"Naam: "</string>
+    <string name="nickname">"Bijnaam: "</string>
+    <string name="status">"Status: "</string>
+    <string name="birthday">"Verjaardag: "</string>
+    <string name="occupations">"Beroepen: "</string>
+    <string name="appearances">"Komt voor in: "</string>
+</resources>
