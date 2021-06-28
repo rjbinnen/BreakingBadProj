@@ -33,7 +33,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
 
         Context context = parent.getContext();
         //int layoutIdForListItem = R.layout.character_list_item;
-        int layoutIdForListItem = R.layout.character_list_item2;
+        int layoutIdForListItem = R.layout.character_list_item;
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View view = inflater.inflate(layoutIdForListItem, parent, false);
@@ -69,10 +69,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
 //            mCharacterImageView = itemView.findViewById(R.id.iv_character_item_image);
 //            mCharacterNicknameTextView = itemView.findViewById(R.id.tv_character_item_nickname);
 //            mCharacterStatusTextView = itemView.findViewById(R.id.tv_character_item_status);
-            mCharacterNameTextView = itemView.findViewById(R.id.name2);
+            mCharacterNameTextView = itemView.findViewById(R.id.name);
             mCharacterImageView = itemView.findViewById(R.id.imageView);
-            mCharacterNicknameTextView = itemView.findViewById(R.id.nickname2);
-            mCharacterStatusTextView = itemView.findViewById(R.id.status2);
+            mCharacterNicknameTextView = itemView.findViewById(R.id.nickname);
+            mCharacterStatusTextView = itemView.findViewById(R.id.status);
 
             mCharacterNicknameTextView.setOnClickListener(this);
             mCharacterNameTextView.setOnClickListener(this);

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements CharacterAPITask.
         Log.d(TAG, "onCharacterClick() called with: view = [" + view + "], itemIndex = [" + itemIndex + "]");
         Context context = this;
 
-        if (view.getId() == R.id.imageView || view.getId() == R.id.tv_character_item_name || view.getId() == R.id.tv_character_item_nickname) {
+        if (view.getId() == R.id.imageView) {
             Class destinationActivity = ImageActivity.class;
             Intent startDestinationActivityIntent = new Intent(context, destinationActivity);
 
