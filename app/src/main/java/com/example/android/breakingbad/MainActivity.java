@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements CharacterAPITask.
             Intent startDestinationActivityIntent = new Intent(context, destinationActivity);
 
             startDestinationActivityIntent.putExtra(Intent.EXTRA_INDEX, characters.get(itemIndex));
+
+
+//            startDestinationActivityIntent.putExtra(Intent.EXTRA_REFERRER, itemIndex);
+
             startActivity(startDestinationActivityIntent);
         } else {
             Class destinationActivity = CharacterActivity.class;

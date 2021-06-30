@@ -63,5 +63,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_item_appearances"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tv_detail_item_quotes"
+        android:text="@string/quotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
