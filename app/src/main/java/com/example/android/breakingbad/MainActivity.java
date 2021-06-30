@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements CharacterAPITask.
             characterAdapter = new CharacterAdapter(characters, this);
             mCharacterListRecyclerView.setAdapter(characterAdapter);
 
-            CharacterAPITask apiTask = new CharacterAPITask(this);
+            CharacterAPITask apiTask = new CharacterAPITask(this, this);
             String[] params = {"https://www.breakingbadapi.com/api/characters/"};
             apiTask.execute(params);
         }

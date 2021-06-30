@@ -1,7 +1,9 @@
 package com.example.android.breakingbad;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,9 +29,11 @@ public class CharacterAPITask extends AsyncTask<String, Void, List<Character>> {
     private final String JSON_CHARACTER_APPEARANCE = "appearance";
 
     private CharacterListener listener = null;
+    private Context context;
 
-    public CharacterAPITask(CharacterListener listener) {
+    public CharacterAPITask(CharacterListener listener, Context context) {
         this.listener = listener;
+        this.context = context;
     }
 
     @Override
@@ -108,7 +112,7 @@ public class CharacterAPITask extends AsyncTask<String, Void, List<Character>> {
         Log.d(TAG, "onPostExecute() called with: characters = [" + characters + "]");
         super.onPostExecute(characters);
         Log.d(TAG, "onPostExecute: list size " + characters.size());
-
+        Toast.makeText(this.context, "Loaded items: " + characters.size(), Toast.LENGTH_LONG).show();
         listener.onCharactersAvailable(characters);
     }
 
